@@ -14,3 +14,10 @@ jobs:
           echo "This is a message inside the group"
           echo "Msg 2"
           echo "::endgroup::"
+      - name: "set env var"
+        run: |
+          echo "MY_VAR=123" >> $GITHUB_ENV
+      - name: "set output"
+        run: |
+          echo $MY_VAR
+          
